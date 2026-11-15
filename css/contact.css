@@ -1,0 +1,357 @@
+
+/* ==========================================
+   KRONOSS TECH STORE - CONTACT PAGE
+   ========================================== */
+
+:root {
+    --navy: #10213a;
+    --blue: #2563eb;
+    --white: #ffffff;
+    --background: #f5f8fc;
+    --text: #243449;
+    --muted: #66778d;
+    --border: #e3eaf3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 25px;
+
+    background: white;
+    padding: 24px 7%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.site-header nav {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+}
+
+.site-header nav a {
+    background: #edf4ff;
+    color: var(--navy);
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.site-header nav a:hover {
+    background: var(--blue);
+    color: white;
+}
+
+/* INTRO */
+
+.contact-intro {
+    text-align: center;
+    padding: 65px 20px 40px;
+    background: linear-gradient(135deg, #eaf2ff, #ffffff);
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-intro h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--navy);
+    margin: 15px 0;
+}
+
+.contact-intro p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* MAIN: TWO ARTICLE GRID */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 5%;
+    align-items: stretch;
+}
+
+.contact-card {
+    display: grid;
+    align-content: start;
+    gap: 20px;
+
+    min-width: 0;
+    background: white;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(16,33,58,0.06);
+}
+
+.card-heading {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-icon {
+    font-size: 30px;
+}
+
+.contact-card h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 23px;
+}
+
+.contact-card > p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* GOOGLE MAP */
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #e2e8f0;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 0;
+}
+
+.location-note {
+    font-size: 13px;
+}
+
+/* HOURS GRID */
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0;
+}
+
+.hours-grid span,
+.hours-grid strong {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.hours-grid strong {
+    text-align: right;
+    color: var(--navy);
+}
+
+.hours-grid .closed {
+    color: #dc2626;
+}
+
+.hours-message {
+    background: #edf4ff;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.hours-message h3 {
+    color: var(--navy);
+    margin: 0 0 10px;
+}
+
+.hours-message p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: var(--navy);
+    color: white;
+    padding: 60px 7% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 45px;
+}
+
+.footer-column {
+    display: grid;
+    align-content: start;
+    justify-items: start;
+    gap: 14px;
+}
+
+.footer-column h3 {
+    font-size: 19px;
+    margin: 0 0 15px;
+}
+
+.footer-column > a:not(.footer-button) {
+    color: #cbd5e1;
+}
+
+.footer-column > a:hover {
+    color: #93c5fd;
+}
+
+.footer-button {
+    display: inline-block;
+    width: 100%;
+    max-width: 220px;
+    padding: 13px 18px;
+
+    background: #263e5d;
+    border: 1px solid #49607b;
+    border-radius: 9px;
+    color: white;
+
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background: var(--blue);
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 55px;
+    padding-top: 20px;
+    border-top: 1px solid #344a65;
+}
+
+.footer-bottom p {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: white;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .site-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .site-header nav {
+        grid-template-columns: 1fr;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-intro {
+        padding: 45px 20px;
+    }
+
+    .contact-grid {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .hours-grid span,
+    .hours-grid strong {
+        font-size: 12px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
