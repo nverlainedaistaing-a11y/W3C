@@ -1,0 +1,353 @@
+
+/* ==========================================
+   KRONOSS TECH STORE - PRODUCTS PAGE
+   ========================================== */
+
+:root {
+    --navy: #10213a;
+    --blue: #2563eb;
+    --white: #ffffff;
+    --background: #f5f8fc;
+    --text: #243449;
+    --muted: #66778d;
+    --border: #e3eaf3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 24px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.site-header nav a {
+    background: #edf4ff;
+    color: var(--navy);
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.site-header nav a:hover {
+    background: var(--blue);
+    color: white;
+}
+
+/* PAGE BANNER */
+
+.page-banner {
+    background: linear-gradient(135deg, #10213a, #244b7c);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.page-banner .eyebrow {
+    color: #93c5fd;
+}
+
+.page-banner h1 {
+    font-size: clamp(36px, 5vw, 54px);
+    margin: 15px 0;
+}
+
+.page-banner p {
+    color: #d4e1f0;
+    line-height: 1.8;
+}
+
+/* CATALOGUE */
+
+.catalogue {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding: 70px 5%;
+}
+
+.catalogue-heading {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.catalogue-heading h2 {
+    color: var(--navy);
+    font-size: 34px;
+    margin: 12px 0 0;
+}
+
+.catalogue-heading p {
+    color: var(--muted);
+}
+
+/* RESPONSIVE PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* EACH ARTICLE IS ITS OWN GRID */
+
+.product-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 230px 1fr;
+
+    box-shadow: 0 8px 25px rgba(16,33,58,0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(16,33,58,0.13);
+}
+
+/* PRODUCT PHOTOGRAPHS */
+
+.product-image {
+    background: white;
+    padding: 18px;
+    border-bottom: 1px solid var(--border);
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+/* PRODUCT INFORMATION */
+
+.product-details {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 13px;
+    padding: 22px;
+}
+
+.category {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.product-details h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.product-details p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.product-price {
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+    margin-top: 12px;
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.catalogue-note {
+    margin-top: 35px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: var(--navy);
+    color: white;
+    padding: 60px 7% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 45px;
+}
+
+.footer-column {
+    display: grid;
+    align-content: start;
+    justify-items: start;
+    gap: 14px;
+}
+
+.footer-column h3 {
+    margin: 0 0 15px;
+    font-size: 19px;
+}
+
+.footer-column > a:not(.footer-button) {
+    color: #cbd5e1;
+}
+
+.footer-column > a:hover {
+    color: #93c5fd;
+}
+
+.footer-button {
+    width: 100%;
+    max-width: 220px;
+    display: inline-block;
+    padding: 13px 18px;
+
+    background: #263e5d;
+    border: 1px solid #49607b;
+    border-radius: 9px;
+    color: white;
+
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background: var(--blue);
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 55px;
+    padding-top: 20px;
+    border-top: 1px solid #344a65;
+}
+
+.footer-bottom p {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: white;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .site-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .catalogue-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
